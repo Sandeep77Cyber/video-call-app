@@ -1,18 +1,31 @@
 const rtcConfig = {
     iceServers: [
-        { urls: "stun:://google.com" },
         {
-            urls: "turn:global.metered.ca:443",
-            username: "YOUR_METERED_USERNAME", // Replace with your Metered.ca username
-            credential: "YOUR_METERED_PASSWORD" // Replace with your Metered.ca password
+            urls: "stun:stun.relay.metered.ca:80",
         },
         {
-            urls: "turn:global.metered.ca:443?transport=tcp",
-            username: "YOUR_METERED_USERNAME",
-            credential: "YOUR_METERED_PASSWORD"
+            urls: "turn:global.relay.metered.ca:80",
+            username: "2387226ad231147017e2d642",
+            credential: "mE/i3UIRXILQe5U8",
+        },
+        {
+            urls: "turn:global.relay.metered.ca:80?transport=tcp",
+            username: "2387226ad231147017e2d642",
+            credential: "mE/i3UIRXILQe5U8",
+        },
+        {
+            urls: "turn:global.relay.metered.ca:443",
+            username: "2387226ad231147017e2d642",
+            credential: "mE/i3UIRXILQe5U8",
+        },
+        {
+            urls: "turns:global.relay.metered.ca:443?transport=tcp",
+            username: "2387226ad231147017e2d642",
+            credential: "mE/i3UIRXILQe5U8",
         }
     ]
 };
+
 
 let localStream;
 let peerConnection;
