@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Call</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="login-box" class="card">
+        <h2>Sign In</h2>
+        <input type="text" id="username" placeholder="Username (e.g. user1)">
+        <input type="password" id="password" placeholder="Password (e.g. 1234)">
+        <input type="text" id="room-id" placeholder="Room Name (e.g. room101)">
+        <button onclick="loginAndJoin()">Join Call</button>
+        <p id="error-msg"></p>
+    </div>
+
+    <div id="call-box" class="hidden">
+        <div class="videos">
+            <video id="localVideo" autoplay playsinline muted></video>
+            <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+        <div class="controls">
+            <button onclick="toggleMic()">Mute/Unmute</button>
+            <button onclick="toggleCam()">Camera On/Off</button>
+            <button class="end" onclick="endCall()">End Call</button>
+        </div>
+    </div>
+
+    <script src="/static/webrtc.js"></script>
+</body>
+</html>
