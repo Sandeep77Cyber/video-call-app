@@ -3,8 +3,8 @@ const rtcConfig = {
         { urls: "stun:://google.com" },
         {
             urls: "turn:global.metered.ca:443",
-            username: "YOUR_METERED_USERNAME",
-            credential: "YOUR_METERED_PASSWORD"
+            username: "YOUR_METERED_USERNAME", // Replace with your Metered.ca username
+            credential: "YOUR_METERED_PASSWORD" // Replace with your Metered.ca password
         },
         {
             urls: "turn:global.metered.ca:443?transport=tcp",
@@ -17,18 +17,6 @@ const rtcConfig = {
 let localStream;
 let peerConnection;
 let ws;
-
-const rtcConfig = {
-    iceServers: [
-        { urls: "stun:://google.com" },
-        // ADD YOUR TURN SERVER HERE FOR DIFFERENT NETWORKS:
-        // {
-        //     urls: "turn:your-turn-server.com:3478",
-        //     username: "your_turn_username",
-        //     credential: "your_turn_password"
-        // }
-    ]
-};
 
 async function loginAndJoin() {
     const username = document.getElementById("username").value;
